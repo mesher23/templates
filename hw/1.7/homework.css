@@ -1,0 +1,43 @@
+.calendar-days li:nth-child(7n-1) /*ранее говорили important не трогать, но я ничего умнее не придумал*/
+{
+	background: red !important;
+}
+.calendar-days li:nth-child(7n)
+{
+	background: red !important;
+}
+.task2 div:nth-child(8)~div /*или (-n+8) я не знаю что лучше*/
+{
+	display: none;
+}
+.customed-list li
+{
+	list-style-type: none;
+}
+.customed-list li:nth-child(even):before
+{
+	content: "@"
+}
+.customed-list li:nth-child(odd):before
+{
+	content: "* "
+}
+.customed-list li:nth-child(1)~li
+{
+	margin-top:20px;
+}
+.customed-list li:nth-last-child(1)~li
+{
+	margin-top:20px;
+}
+.extra-task li /*придумав решение я обрадовался так сильно, что ударился ногой об стол*/
+{
+    margin-right: 30px;
+    flex: left;
+}
+.extra-task li:first-child:nth-last-child(n+5),
+.extra-task li:first-child:nth-last-child(n+5)~li 
+{
+    margin-right: 10px;
+    flex: left;
+}
